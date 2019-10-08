@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">Current Subject Value: {{streamService.behaviourSubject | async}}</div>
+        <div class="col-12">
+            <label>New Value <input [formControl]="inputValue"></label>
+        </div>
+        <div class="col-12">
+            <button type="button" (click)="sendInputValueToSubject()">Update Subject</button>
+        </div>
+    </div>
+</div>

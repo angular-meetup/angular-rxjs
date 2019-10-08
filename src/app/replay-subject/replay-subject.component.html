@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">Current ReplaySubject (buffer:2) Value: {{replaySubjectValue}}</div>
+        <div class="col-12">Current ReplaySubject (buffer:5, time: 5s) Value: {{replaySubjectWithTimeValue}}</div>
+        <div class="col-12">
+            <label>New Subject Value <input [formControl]="inputValue"></label>
+        </div>
+        <div class="col-12">
+            <button type="button" (click)="sendInputValueToSubject()">Update Subjects</button>
+        </div>
+        <div class="col-12">
+            <button type="button" (click)="newSubscribe('replay')">New Subscription [Replay]Subject</button>
+        </div>
+        <div class="col-12">
+            <button type="button" (click)="newSubscribe('replayWithTime')">New Subscription [Replay]Subject[Time]
+            </button>
+        </div>
+        <div class="col-12">
+            <button type="button" (click)="clearNewSubs()">Clear New Subscriptions</button>
+        </div>
+    </div>
+</div>

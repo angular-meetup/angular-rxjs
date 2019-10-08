@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">Current Subject Value: {{streamService.asyncSubject | async}}</div>
+        <div class="col-12">
+            <label>New Value <input [formControl]="inputValue"></label>
+        </div>
+        <div class="col-12">
+            <button type="button" (click)="sendInputValueToSubject()">Update Subject</button>
+        </div>
+        <div class="col-12">
+            <button type="button" (click)="completeAsyncSubject()">Complete Subject</button>
+        </div>
+        <div class="col-12">
+            <button type="button" (click)="createNewAsyncSubject()">Create New Async Subject</button>
+        </div>
+    </div>
+</div>
