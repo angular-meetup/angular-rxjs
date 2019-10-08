@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AsyncSubject, BehaviorSubject, ReplaySubject, Subject } from 'rxjs';
+import { AsyncSubject, BehaviorSubject, Observable, ReplaySubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +22,16 @@ export class StreamService {
   asyncSubject: AsyncSubject<number> = new AsyncSubject<number>();
 
   constructor() {
+  }
+
+  /**
+   * actually you should not expose the subjects like this tutorial does !!!
+   * better: make {@link StreamService} return readOnly Observables and handle value changes
+   */
+  readonly subjectObservable$ = this.subject.asObservable();
+
+  subjectNextValue(nextValue: number): void {
+    this.subject.next(nextValue);
   }
 
   createNewAsyncSubject() {

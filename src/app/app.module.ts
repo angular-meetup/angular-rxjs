@@ -10,6 +10,7 @@ import { BehaviourSubjectComponent } from './behaviour-subject/behaviour-subject
 import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
 import { AsyncSubjectComponent } from './async-subject/async-subject.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RxjsOperatorsComponent } from './rxjs-operators/rxjs-operators.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SubjectComponent,
     BehaviourSubjectComponent,
     ReplaySubjectComponent,
-    AsyncSubjectComponent
+    AsyncSubjectComponent,
+    RxjsOperatorsComponent
   ],
   imports: [
     BrowserModule,

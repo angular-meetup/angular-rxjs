@@ -30,7 +30,7 @@ export class ReplaySubjectComponent implements OnInit, OnDestroy {
 
     this.subscription$.add(
       this.streamService.replaySubjectWithTime.subscribe(currentVal => {
-          this.replaySubjectWithTimeValue = currentVal
+          this.replaySubjectWithTimeValue = currentVal;
         }
       )
     );
@@ -38,7 +38,7 @@ export class ReplaySubjectComponent implements OnInit, OnDestroy {
 
   sendInputValueToSubject(): void {
     this.streamService.replaySubjectWithTime.next(this.inputValue.value);
-    this.streamService.replaySubject.next(this.inputValue.value)
+    this.streamService.replaySubject.next(this.inputValue.value);
   }
 
   ngOnDestroy(): void {
